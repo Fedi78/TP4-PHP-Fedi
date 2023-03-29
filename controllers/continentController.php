@@ -4,16 +4,16 @@ switch($action){
    
     case 'list' :
             $lesContinents=Continent::findAll();
-            include ('vues/listeContinents.php');
+            include ('vues/continent/listeContinents.php');
     break;
     case 'add' :
             $mode="Ajouter";
-            include('vues/formContinent.php');
+            include('vues/continent/formContinent.php');
     break;
     case 'update' :
             $mode="Modifier";
             $continent = Continent::findById($_GET['num']);
-            include('vues/formContinent.php');
+            include('vues/continent/formContinent.php');
     break;
     case 'delete' :
             $Continent=Continent::findById($_GET['num']);

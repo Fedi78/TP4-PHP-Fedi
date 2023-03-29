@@ -46,8 +46,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="listeNationalite.php" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestion des Nationalités</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="listeNationalite.php">Liste des Nationalités</a>
-              <a class="dropdown-item" href="formAjoutNationalite.php">ajouter un Nationalités</a>
+              <a class="dropdown-item" href="index.php?uc=nationalite&action=list">Liste des Nationalités</a>
+              <a class="dropdown-item" href="index.php?uc=nationalite&action=add">ajouter un Nationalités</a>
             </div> 
               </li>
                <li class="nav-item dropdown">

@@ -82,9 +82,8 @@ class Nationalite{
             if($libelle != ""){
                 $texteReq .= " and n.libelle like '%" . $libelle . "%'";
             }
-            
-            if($continent != "Tous"){ 
-                $texteReq .= " and c.num =" .$continent;
+            if($continent != "Tous"){
+                $texteReq.= " and c.num =" .$continent;
             }
             $texteReq.= " order by n.libelle";
             $req = MonPdo :: getInstance()-> prepare($texteReq);
@@ -177,6 +176,16 @@ class Nationalite{
         }
 
 
+
+        /**
+         * Set the value of num
+         */
+        public function setNum($num): self
+        {
+                $this->num = $num;
+
+                return $this;
+        }
 }
 
 

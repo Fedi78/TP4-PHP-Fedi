@@ -17,7 +17,7 @@
             include ('controllers/continentController.php');
             break;
             case 'nationalite' :
-                include ('controllers/NationaliteController.php');
+                include ('controllers/nationaliteController.php');
                 break;//brexk modal
     }
     include "vues/footer.php"; ?>
