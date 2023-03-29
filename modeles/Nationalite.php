@@ -78,8 +78,6 @@ class Nationalite{
 
         public static function findAll(?string $libelle="", ?string $continent="Tous") : array
         {
-            
-
             $texteReq = "select n.num as numero, n.libelle as 'libNation', c.libelle as 'libContinent' from nationalite n, continent c where n.numContinent=c.num";
             if($libelle != ""){
                 $texteReq .= " and n.libelle like '%" . $libelle . "%'";
