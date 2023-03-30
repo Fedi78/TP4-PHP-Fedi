@@ -11,7 +11,11 @@
                       <select name="continent" class="form-control">
                         <?php
                         foreach($lesContinents as $continent){
+<<<<<<< HEAD:vues/nationalite/formNationalite.php
                             $selection=$continent->getNum() == $laNationalite->getNumContinent() ? 'selected' :'';
+=======
+                            $selection=$continent->getNum() == $laNationalite->getNumContinent()->getNum() ? 'selected' :'';
+>>>>>>> 02fe9fff47b49e144f52a64f654009eaeb113563:vues/nationalite/formNationalite
                            echo "<option value='$continent->num' $selection>$continent->libelle</option>";
                         }                    
                         ?>
