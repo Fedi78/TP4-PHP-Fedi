@@ -12,7 +12,7 @@ switch($action){
         }
         $lesContients=Continent::findAll();
         $lesNationalites=Nationalite::findAll($libelle, $continentSel);
-            include ('vues/nationalite/listeNationalites.php');
+            include ('vues/nationalite/listeNationalite.php');
     break;
     case 'add' :
             $mode="Ajouter";
