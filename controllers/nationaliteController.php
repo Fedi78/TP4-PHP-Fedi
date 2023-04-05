@@ -10,7 +10,7 @@ switch($action){
                 $libelle= $_POST['libelle'];
                 $continentSel= $_POST['continent'];
         }
-        $lesContients=Continent::findAll();
+        $lesContinents=Continent::findAll();
         $lesNationalites=Nationalite::findAll($libelle, $continentSel);
             include ('vues/nationalite/listeNationalite.php');
     break;

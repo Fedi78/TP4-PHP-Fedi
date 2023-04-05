@@ -4,7 +4,7 @@
               <div class="col-9"> 
                 <h2> Liste des Nationalités </h2>    
               </div>
-              <div class="col-3"><a href="formNationalite.php?action=Ajouter" class='btn btn-success'><img src="../Images/plus-circle.svg" width="20" ><i class="fas fa-plus-circle">
+              <div class="col-3"><a href="index.php?uc=nationalite&action=add" class='btn btn-success'><img src="./Images/plus-circle.svg" width="20" ><i class="fas fa-plus-circle">
 
               </i> Créer une nationalité</a> 
 
@@ -26,21 +26,14 @@
             </div>
       
             <div class="col">
-            <select name="continent" class="form-control">
-                  <?php      
-                  
-                  echo " 
-                      <option value='tous'> Tous les continents</option>
+            <select name="continent" class="form-control" onChange="document.getElementById('formRecherche').submit()">
+                      <?php      
                       
-                      ";
-                  
-                  foreach($lesContinents as $continent){
-                      
-                      $selection = $continent->getNum() == $continentSel ? 'selected' : '';
-                      echo " 
-                      <option value='".$continent->getNum()."'". $selection.">". $continent->getLibelle()."</option>
-                      
-                      ";
+                      echo "<option value='Tous'> Tous les continents</option>";
+                      foreach($lesContinents as $continent){
+                          
+                          $selection = $continent->getNum() == intval($continentSel) ? 'selected' : '';
+                          echo "<option value='" . $continent->getNum() . "' ". $selection." >". $continent->getLibelle() ."</option>";
                   
                   }
                   ?>
