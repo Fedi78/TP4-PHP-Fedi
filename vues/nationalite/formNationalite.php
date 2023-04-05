@@ -14,6 +14,7 @@
                         {
                             $selection=$continent->getNum() == $laNationalite->getNumContinent() ? 'selected' :'';
                             $selection=$continent->getNum() == $laNationalite->getNumContinent()->getNum() ? 'selected' :'';
+                            
                             echo "<option value='" . $continent->getNum() . "' ". $selection." >". $continent->getLibelle() ."</option>";
                         }                    
                         ?>
