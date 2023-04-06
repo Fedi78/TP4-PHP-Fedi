@@ -1,19 +1,17 @@
       <div class="container mt-5">
 
       <div class="row pt-3"
-              <div class="col-9"> 
-                <h2> Liste des Nationalités </h2>    
+              <div class="col-9">
+                <h2> Liste des Nationalités </h2>     
               </div>
-              <div class="col-3"><a href="index.php?uc=nationalite&action=add" class='btn btn-success'><img src="./Images/plus-circle.svg" width="20" ><i class="fas fa-plus-circle">
-
-              </i> Créer une nationalité</a> 
-
+              <div class="col-3"><a href="index.php?uc=nationalites&action=add" class='btn btn-success'><img src="./Images/plus-circle.svg" width="20" ><i class="fas fa-plus-circle"></i> Créer une nationalité</a> 
+              
           </div>
 
-      
+          <br>
 
 
-        <form action="index.php?uc=nationalite&action=list" method="post" class="border border-primary rounded p-3">
+        <form action="index.php?uc=nationalites&action=list" method="post" class="border border-primary rounded p-3">
 
         <div class="row">
           
@@ -81,11 +79,11 @@
         echo"
       
         <td>
-          <a href='formNationalite.php?action=Modifier&num=$nationalite->numero'class='btn btn-success'><img src='./images/modifier.svg'>
+          <a href='index.php?uc=nationalites&action=update&num=".$nationalite->numero."' class='btn btn-success'><img src='./images/modifier.svg'>
           
           </a>
           
-          <a href='#modalSupp' data-toggle='modal'data-message='êtes-vous sûr de vouloir supprimer cette nationalité ?' data-supp='supprimerNationalite.php?num=$nationalite->numero' class='btn btn-danger'><img src='./Images/supp.svg'><i class='fas fa-plus-circle'></i></a>
+          <a href='#modalSupp' data-toggle='modal'data-message='êtes-vous sûr de vouloir supprimer cette nationalité ?' data-supp='index.php?uc=nationalites&action=delete&num=".$nationalite->numero."' class='btn btn-danger'><img src='./Images/supp.svg'><i class='fas fa-plus-circle'></i></a>
             
             
           </a>
@@ -100,7 +98,7 @@
         ?>
         </table>
       </div>
-      <br>
+   
       <div class="dialecte">
 
             
